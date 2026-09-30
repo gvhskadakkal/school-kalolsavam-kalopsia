@@ -6,8 +6,332 @@
     <title>School Kalolsavam 2026 - GVHSS Kadakkal</title>
 <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
-    
-    
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7b1e1e, #d35400);
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 580px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background:
+                linear-gradient(rgba(80, 20, 10, 0.75), rgba(80, 20, 10, 0.75)),
+                url('40031sg.JPG') center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: white;
+            font-size: 24px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 28px;
+            background: #ffd166;
+            color: #7b1e1e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            background: #fff;
+            padding: 60px 8%;
+        }
+
+        .leadership-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .leader-card {
+            background: #fff8f0;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            max-width: 300px;
+            width: 100%;
+            border-bottom: 4px solid #d35400;
+            transition: transform 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .leader-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #7b1e1e;
+            margin-bottom: 15px;
+        }
+
+        .leader-card h3 {
+            color: #7b1e1e;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .leader-card p {
+            color: #d35400;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #7b1e1e;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: green;
+        }
+
+        /* Posters Section */
+        .posters-section {
+            background: #ffe3d1;
+        }
+
+        .posters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .poster-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Cards and Results Grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .art-card {
+            border-top: 5px solid #d35400;
+        }
+
+        /* Winner Link Button Style */
+        .winner-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #d35400;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .winner-btn:hover {
+            background: #7b1e1e;
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Modal Box Style */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 450px;
+            width: 90%;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .modal-content h3 {
+            color: #7b1e1e;
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-align: center;
+            border-bottom: 2px solid #ffd166;
+            padding-bottom: 8px;
+        }
+
+        .winner-details-list {
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .winner-details-list li {
+            background: #fff8f0;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-left: 4px solid #d35400;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: #4a1515;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -141,223 +465,54 @@
         </div>
     </section>
     
-    <section id="championship">
-        <h2 class="section-title">Kalospia Result</h2>
+    <section>
+        <h2 class="section-title">Kalopsia Result</h2>
+        <p class="section-subtitle">Click on any event to view the winners list</p>
         
-        <div class="championship">
-            <div class="cards">
+        <div class="cards">
 
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Sasthreeya Sangeetham</h3>
-                    <p>
-                        <p>Girls Section (HS)</p>
-                    <ul>
-                        <li>Niranjana Anil</li>
-                    </ul>
-                    <ul>
-                        <p>Boys Section (HSS)</p>
-                    
-                        <li>Ameen Thajudeen</li>
-                    </ul>    
-                        <ul>
-                            <p>Boys Section (HS)</p>
-                            <li>Abhimanyu S Nair</li>
-                            <li>AR Shravan</li>
-                        </ul>
-                    </p>
-                    <h3>Odakkuzal</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Kalyani</li>
-                    </ul>
-                </div>
-                
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Recitation</h3>
-                    <p>
-                     <ul>
-                         <p>Section Arabic (HS)</p>
-                         <li>Dilna Fathima</li>                 
-                     </ul>
-                     <ul>
-                        <p>Section Hindi (HS)</p>
-                        <li>Avanthika DM</li>
-                        <li>Fousiya Beevi SS</li>
-                        <li>Ahadhiya S</li>
-                     </ul>
-                     <ul>
-                        <p>Section Kannada (HS)</p>
-                        <li>Aradhya</li>
-                     </ul>
-                     
-                     <ul>
-                        <p>Section Tamil</p>
-                        <li>Janaki Vinil</li>
-                     </ul>
-                    <ul>
-                        <p>Section Urudu</p>
-                        <li>Anika Rachel</li>
-                     </ul>
-                    </p>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Recitation 2</h3>
-                    <p>
-                     <ul>
-                        <p>Section Malayalam (HS)</p>
-                        <li>Niranjana Anil</li>
-                        <li>Anika Rachel Paul</li>
-                        <li>Sravan AR</li>
-                        <li>Sivananda A Shine</li>
-                        <li>Vaiga Lekshmi</li>
-                        <li>Akshanth</li>
-                     </ul>
-                      
-                     <ul>
-                        <p>Section English (HS)</p>
-                        <li>Sreeparvathy</li>
-                        <li>Fidha Fathima</li>
-                        <li>Idhalika</li>
-                     </ul>
-                    </p>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Chenda</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Sreenandh</li>
-                    </ul>
-                    <h3>Tabala</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Swaroop</li>
-                    </ul>
-                    <h3>Guitar</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Siva Shaji</li>
-                    </ul>
-                    
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Volin Eastern</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Sreehari G</li>
-                        <li>Vaiga N Araj</li>
-                    </ul>
-                    <ul>
-                        <p>HSS Section</p>
-                        <li>Akash Krishna</li>
-                    </ul>
-                    <h3>TrippleJass</h3>
-                    <ul>
-                        <p>HSS Section</p>
-                        <li>Alfiyan</li>
-                    </ul>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Prasangam</h3>
-                    <p>
-                     <ul>
-                         <p>Section Malayalam (HS)</p>
-                         <li>Manav TS</li>
-                         <li>Hadhiya S</li>
-                         <li>Gaya Krishna</li>
-                     </ul>
-                     <ul>
-                        <p>Section English (HS)</p>
-                        <li>Janaki Vinil</li>
-                        <li>Hina Fathima NR</li>
-                        <li>Asmina Fathima</li>
-                     </ul>
-                    </p>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Lalithagaanam</h3>
-                    <p>
-                      <ul>
-                        <p>Section Boys (HS)</p>
-                        <li>Abhimanyu S Nair</li>
-                        <li>Abhinav Anil</li>
-                      </ul>
-                      <ul>
-                        <p>Section Girls (HS)</p>
-                        <li>Niranjana Anil</li>
-                        <li>Anika Rachel Paul</li>
-                        <li>Sarangy SD</li>
-                        <li>Hanna Fathima S</li>
-                        <li>Sivananda S Shine</li>
-                      </ul>
-                    </p>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Maappilapattu</h3>
-                    <p>
-                     <ul>
-                        <p>Section Boys (HS)</p>
-                        <li>Ansalsha Shyju</li>
-                     </ul>
-                     <ul>
-                        <p>Section Girls (HS)</p>
-                        <li>Dilna Fathima</li>
-                        <li>Amina N</li>
-                        <li>Umaira Fathima</li>
-                        <li>Hanna Fathima</li>
-                        <li>Ramsana S</li>
-                        <li>Anha Fathima</li>
-                        <li>Afreen RS</li>
-                        <li>Sivananda S Shine</li>
-                     </ul>
-                    </p>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Nadaswaram</h3>
-                    <p>
-                     <ul>
-                        <p>HS Section</p>
-                        <li>Kalyani</li>
-                     </ul>
-                    </p>
-                    <h3>Nadanpattu </h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Sivanand & Team</li>
-                        <li>Vaiga & Team</li>
-                        <li>Aliya & Team</li>
-                    </ul>
-                </div>
-                <div class="card art-card">
-                    <div class="icon"></div>
-                    <h3>Dheshabhakthiganam</h3>
-                    <p>
-                     <ul>
-                        <li>Abiya Nazeer & Team</li>
-                     </ul>
-                    </p>
-                    <h3>Kathaprasangam</h3>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Anaswar PM</li>
-                    </ul>
-                    <ul>
-                        <p>HS Section</p>
-                        <li>Devanandha</li>
-                        <li>Al Dilma Jannath</li>
-                        <li>Gaya Krishna</li>
-                    </ul>
-                </div>
-                
+            <div class="card art-card">
+                <div class="icon">🎤</div>
+                <h3>Lalithagaanam Winners</h3>
+                <p>Click below to view Lalithagaanam HS Section winners list.</p>
+                <a class="winner-btn" onclick="showWinners('Lalithagaanam Winners', '<b>Boys Section (HS):</b><ul><li>Abhimanyu S Nair</li><li>Abhinav Anil</li></ul><br><b>Girls Section (HS):</b><ul><li>Niranjana Anil</li><li>Anika Rachel Paul</li><li>Sarangy SD</li><li>Hanna Fathima S</li><li>Sivananda S Shine</li></ul>')">View Winners</a>
             </div>
+
+            <div class="card art-card">
+                <div class="icon">🎵</div>
+                <h3>Sasthreeya Sangeetham Winners</h3>
+                <p>Click below to view Sasthreeya Sangeetham winners list.</p>
+                <a class="winner-btn" onclick="showWinners('Sasthreeya Sangeetham Winners', '<b>Girls Section (HS):</b><ul><li>Niranjana Anil</li></ul><br><b>Boys Section (HSS):</b><ul><li>Ameen Thajudeen</li></ul><br><b>Boys Section (HS):</b><ul><li>Abhimanyu S Nair</li><li>AR Shravan</li></ul>')">View Winners</a>
+            </div>
+
+            <div class="card art-card">
+                <div class="icon">🎙️</div>
+                <h3>Maappilapattu Winners</h3>
+                <p>Click below to view Maappilapattu winners list.</p>
+                <a class="winner-btn" onclick="showWinners('Maappilapattu Winners', '<b>Boys Section (HS):</b><ul><li>Ansalsha Shyju</li></ul><br><b>Girls Section (HS):</b><ul><li>Dilna Fathima</li><li>Amina N</li><li>Umaira Fathima</li><li>Hanna Fathima</li><li>Ramsana S</li><li>Anha Fathima</li><li>Afreen RS</li><li>Sivananda S Shine</li></ul>')">View Winners</a>
+            </div>
+
+            <div class="card art-card">
+                <div class="icon">📖</div>
+                <h3>Recitation Winners</h3>
+                <p>Click below to view language recitation winners list.</p>
+                <a class="winner-btn" onclick="showWinners('Recitation Winners', '<b>Arabic Section:</b> Dilna Fathima<br><b>Hindi Section:</b> Avanthika DM, Fousiya Beevi SS, Ahadhiya S<br><b>Kannada Section:</b> Aradhya<br><b>Tamil Section:</b> Janaki Vinil<br><b>Urdu Section:</b> Anika Rachel')">View Winners</a>
+            </div>
+
+            <div class="card art-card">
+                <div class="icon">📜</div>
+                <h3>Recitation 2 (Malayalam & English)</h3>
+                <p>Click below to view Malayalam and English recitation winners.</p>
+                <a class="winner-btn" onclick="showWinners('Recitation 2 Winners', '<b>Malayalam (HS):</b> Niranjana Anil, Anika Rachel Paul, Sravan AR, Sivananda A Shine, Vaiga Lekshmi, Akshanth<br><br><b>English (HS):</b> Sreeparvathy, Fidha Fathima, Idhalika')">View Winners</a>
+            </div>
+
+            <div class="card art-card">
+                <div class="icon">🥁</div>
+                <h3>Instruments Winners</h3>
+                <p>Click below to view Chenda, Tabala, Guitar, Violin & others.</p>
+                <a class="winner-btn" onclick="showWinners('Instrument Events Winners', '<b>Chenda:</b> Sreenandh<br><b>Tabala:</b> Swaroop<br><b>Guitar:</b> Siva Shaji<br><b>Violin Eastern:</b> Sreehari G, Vaiga N Araj, Akash Krishna<br><b>TrippleJass:</b> Alfiyan<br><b>Odakkuzal:</b> Kalyani')">View Winners</a>
+            </div>
+
         </div>
     </section>
 
@@ -434,12 +589,35 @@
             <img src="kite_logo.png" alt="KITE Logo">
         </div>
     </section>
-
+<div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Item Name</h3>
+            <div id="modalDetails" class="winner-details-list"></div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <p>🎭 GVHSS Kadakkal School Kalolsavam 2026</p>
         <p>TEAM IT GVHSS KADAKKAL</p>
     </footer>
+<script>
+        function showWinners(title, detailsHtml) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDetails').innerHTML = detailsHtml;
+            document.getElementById('winnerModal').style.display = 'flex';
+        }
 
+        function closeModal() {
+            document.getElementById('winnerModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('winnerModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
