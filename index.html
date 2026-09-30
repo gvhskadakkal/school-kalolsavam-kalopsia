@@ -4,397 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Kalolsavam 2026 - GVHSS Kadakkal</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #fff8f0;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #7b1e1e, #d35400);
-            color: white;
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .school-logo {
-            height: 50px;
-            width: auto;
-            border-radius: 50%;
-            background: white;
-            padding: 2px;
-            object-fit: contain;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ffd166;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 580px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px 20px;
-            background:
-                linear-gradient(rgba(80, 20, 10, 0.75), rgba(80, 20, 10, 0.75)),
-                url('40031sg.JPG') center/cover no-repeat;
-            color: white;
-        }
-
-        /* Hero Logo Large Style */
-        .hero-logo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background: white;
-            padding: 5px;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            object-fit: contain;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            color: white;
-            font-size: 24px;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 13px 28px;
-            background: #ffd166;
-            color: #7b1e1e;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: white;
-        }
-
-        /* Leadership Section */
-        .leadership-section {
-            background: #fff;
-            padding: 60px 8%;
-        }
-
-        .leadership-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .leader-card {
-            background: #fff8f0;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            max-width: 300px;
-            width: 100%;
-            border-bottom: 4px solid #d35400;
-            transition: transform 0.3s ease;
-        }
-
-        .leader-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .leader-card img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #7b1e1e;
-            margin-bottom: 15px;
-        }
-
-        .leader-card h3 {
-            color: #7b1e1e;
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-
-        .leader-card p {
-            color: #d35400;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        /* Common Sections */
-        section {
-            padding: 70px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            color: #7b1e1e;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            margin-bottom: 40px;
-            color: green;
-        }
-
-        /* Posters / Event Announcements Section */
-        .posters-section {
-            background: #ffe3d1;
-        }
-
-        .posters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            justify-items: center;
-        }
-
-        .poster-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .poster-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .poster-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* About */
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .about-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: #d35400;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .about-link:hover {
-            color: #7b1e1e;
-        }
-
-        /* Sub Jilla Championship */
-        .championship {
-            background: #fff0dc;
-        }
-
-        .championship-img-container {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .championship-img {
-            max-width: 100%;
-            width: 700px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .card .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #a93226;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* Arts Section */
-        .arts {
-            background: white;
-        }
-
-        .arts-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .arts-gallery img {
-            max-width: 320px;
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            object-fit: cover;
-        }
-
-        .art-card {
-            border-top: 5px solid #d35400;
-        }
-
-        .art-card h3 {
-            color: #d35400;
-        }
-
-        /* Powered by Little KITEs Section */
-        .kites-section {
-            background: #fff0eb;
-            text-align: center;
-            border-top: 3px solid #d35400;
-        }
-
-        .kites-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .kites-container img {
-            height: 140px;
-            width: auto;
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .kites-container img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            background: #4a1515;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer p {
-            margin: 5px;
-        }
-
-        /* Mobile */
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 7px;
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero-logo {
-                width: 100px;
-                height: 100px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 50px 5%;
-            }
-
-            .kites-container img {
-                height: 100px;
-            }
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -536,32 +147,214 @@
 
                 <div class="card art-card">
                     <div class="icon"></div>
-                    <h3>Music Events</h3>
+                    <h3>Sasthreeya Sangeetham</h3>
                     <p>
+                        <p>Girls Section (HS)</p>
                     <ul>
-                        <li>Sasthreeya Sageetham HS: (1st)Niranjana Anil, (2nd)AR Shravan, (3rd)Abhimanyu S Nair, (1st)Ameen Thajudeen(hss)..</li>
-                        
-                        <li>Recitation Urudu: (1st)Anika Rachel</li>
-                        <li>Recitation Tamil: (1st)Anaki Vinil</li>
-                        <li>Recitation Kannada: (1st)Aradhya</li>
-                       
+                        <li>Niranjana Anil</li>
                     </ul>
+                    <ul>
+                        <p>Boys Section (HSS)</p>
+                    
+                        <li>Ameen Thajudeen</li>
+                    </ul>    
+                        <ul>
+                            <p>Boys Section (HS)</p>
+                            <li>Abhimanyu S Nair</li>
+                            <li>AR Shravan</li>
+                        </ul>
                     </p>
+                    <h3>Odakkuzal</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Kalyani</li>
+                    </ul>
                 </div>
                 
                 <div class="card art-card">
                     <div class="icon"></div>
-                    <h3>Music Events 2</h3>
+                    <h3>Recitation</h3>
                     <p>
                      <ul>
-                         <li>Recitation Hindi: (1st)Avanthika DM, (2nd)Fousiya Beevi SS, (3rd)Ahadhiya S </li>
-                        <li>Recitation Arabichs: (1st)Dilna Fathima</li>
-                        <li>Recitation English: (1st)Idhalika, (2nd)Fidha Fathima,(3rd)Sreeparvathi</li>
-                        <li>Prasangam English: (1st)Asmina Fathima, (2nd)Janaki Vinil, (3rd)Hina Fathima NR</li>
+                         <p>Section Arabic (HS)</p>
+                         <li>Dilna Fathima</li>                 
+                     </ul>
+                     <ul>
+                        <p>Section Hindi (HS)</p>
+                        <li>Avanthika DM</li>
+                        <li>Fousiya Beevi SS</li>
+                        <li>Ahadhiya S</li>
+                     </ul>
+                     <ul>
+                        <p>Section Kannada (HS)</p>
+                        <li>Aradhya</li>
+                     </ul>
+                     
+                     <ul>
+                        <p>Section Tamil</p>
+                        <li>Janaki Vinil</li>
+                     </ul>
+                    <ul>
+                        <p>Section Urudu</p>
+                        <li>Anika Rachel</li>
                      </ul>
                     </p>
                 </div>
-
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Recitation 2</h3>
+                    <p>
+                     <ul>
+                        <p>Section Malayalam (HS)</p>
+                        <li>Niranjana Anil</li>
+                        <li>Anika Rachel Paul</li>
+                        <li>Sravan AR</li>
+                        <li>Sivananda A Shine</li>
+                        <li>Vaiga Lekshmi</li>
+                        <li>Akshanth</li>
+                     </ul>
+                      
+                     <ul>
+                        <p>Section English (HS)</p>
+                        <li>Sreeparvathy</li>
+                        <li>Fidha Fathima</li>
+                        <li>Idhalika</li>
+                     </ul>
+                    </p>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Chenda</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Sreenandh</li>
+                    </ul>
+                    <h3>Tabala</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Swaroop</li>
+                    </ul>
+                    <h3>Guitar</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Siva Shaji</li>
+                    </ul>
+                    
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Volin Eastern</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Sreehari G</li>
+                        <li>Vaiga N Araj</li>
+                    </ul>
+                    <ul>
+                        <p>HSS Section</p>
+                        <li>Akash Krishna</li>
+                    </ul>
+                    <h3>TrippleJass</h3>
+                    <ul>
+                        <p>HSS Section</p>
+                        <li>Alfiyan</li>
+                    </ul>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Prasangam</h3>
+                    <p>
+                     <ul>
+                         <p>Section Malayalam (HS)</p>
+                         <li>Manav TS</li>
+                         <li>Hadhiya S</li>
+                         <li>Gaya Krishna</li>
+                     </ul>
+                     <ul>
+                        <p>Section English (HS)</p>
+                        <li>Janaki Vinil</li>
+                        <li>Hina Fathima NR</li>
+                        <li>Asmina Fathima</li>
+                     </ul>
+                    </p>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Lalithagaanam</h3>
+                    <p>
+                      <ul>
+                        <p>Section Boys (HS)</p>
+                        <li>Abhimanyu S Nair</li>
+                        <li>Abhinav Anil</li>
+                      </ul>
+                      <ul>
+                        <p>Section Girls (HS)</p>
+                        <li>Niranjana Anil</li>
+                        <li>Anika Rachel Paul</li>
+                        <li>Sarangy SD</li>
+                        <li>Hanna Fathima S</li>
+                        <li>Sivananda S Shine</li>
+                      </ul>
+                    </p>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Maappilapattu</h3>
+                    <p>
+                     <ul>
+                        <p>Section Boys (HS)</p>
+                        <li>Ansalsha Shyju</li>
+                     </ul>
+                     <ul>
+                        <p>Section Girls (HS)</p>
+                        <li>Dilna Fathima</li>
+                        <li>Amina N</li>
+                        <li>Umaira Fathima</li>
+                        <li>Hanna Fathima</li>
+                        <li>Ramsana S</li>
+                        <li>Anha Fathima</li>
+                        <li>Afreen RS</li>
+                        <li>Sivananda S Shine</li>
+                     </ul>
+                    </p>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Nadaswaram</h3>
+                    <p>
+                     <ul>
+                        <p>HS Section</p>
+                        <li>Kalyani</li>
+                     </ul>
+                    </p>
+                    <h3>Nadanpattu </h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Sivanand & Team</li>
+                        <li>Vaiga & Team</li>
+                        <li>Aliya & Team</li>
+                    </ul>
+                </div>
+                <div class="card art-card">
+                    <div class="icon"></div>
+                    <h3>Dheshabhakthiganam</h3>
+                    <p>
+                     <ul>
+                        <li>Abiya Nazeer & Team</li>
+                     </ul>
+                    </p>
+                    <h3>Kathaprasangam</h3>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Anaswar PM</li>
+                    </ul>
+                    <ul>
+                        <p>HS Section</p>
+                        <li>Devanandha</li>
+                        <li>Al Dilma Jannath</li>
+                        <li>Gaya Krishna</li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -596,6 +389,21 @@
                 cultural spirit and artistic talents of students.
             </p>
             <br>
+            
+            <!-- Gallery Section Added Above the Link -->
+            <h3 class="section-title" style="font-size: 24px; margin-top: 25px;">Kalolsavam Gallery</h3>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="wzz.jpeg" alt="Kalolsavam Performance 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="WhatsApp Image 2026-09-27 at 07.37.39 (1).jpeg" alt="Kalolsavam Performance 2">
+                </div>
+                <div class="gallery-card">
+                    <img src="WhatsApp Image 2026-09-27 at 07.37.39.jpeg" alt="Kalolsavam Performance 3">
+                </div>
+            </div>
+
             <p>
                 GVHSS Kadakkal is dedicated to nurturing excellence in academics, arts, and sports. To know more about our school and ongoing events, visit our official portal:
             </p>
